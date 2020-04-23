@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
-class LogoutController < ApplicationController
+class SessionsController < ApplicationController
   include LogoutHelper
+
+  def login
+    redirect_to '/' if session[:userinfo].present?
+  end
 
   def logout
     reset_session

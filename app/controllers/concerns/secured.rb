@@ -8,6 +8,6 @@ module Secured
   end
 
   def logged_in_using_omniauth?
-    redirect_to '/' if session[:userinfo].blank?
+    redirect_to '/auth/login' if session[:userinfo].blank?
   end
 end
