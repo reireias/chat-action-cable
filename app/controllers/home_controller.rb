@@ -3,5 +3,7 @@
 class HomeController < ApplicationController
   include Secured
 
-  def show; end
+  def show
+    pp current_user
+  end
 end

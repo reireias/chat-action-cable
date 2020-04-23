@@ -4,7 +4,8 @@ class Auth0Controller < ApplicationController
   def callback
     # This stores all the user information that came from Auth0
     # and the IdP
-    session[:userinfo] = request.env['omniauth.auth']
+    user = User.create_or_find_from_auth_hash(request.env['omniauth.auth'])
+    session[:user_id] = user.id
 
     # Redirect to the URL you want after successful auth
     redirect_to '/'

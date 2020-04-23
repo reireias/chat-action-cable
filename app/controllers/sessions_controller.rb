@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   include LogoutHelper
 
   def login
-    redirect_to '/' if session[:userinfo].present?
+    redirect_to '/' if session[:user_id].present?
   end
 
   def logout
