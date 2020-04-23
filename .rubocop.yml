@@ -45,3 +45,7 @@ Style/HashTransformValues:
 
 Style/FrozenStringLiteralComment:
   Enabled: true
+
+# no document
+Style/Documentation:
+  Enabled: false
