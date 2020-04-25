@@ -1,3 +1,6 @@
-<h1>Home#show</h1>
+<%= stylesheet_pack_tag 'home/show' %>
 
-<%= session[:user_id].inspect %>
+<div id="vue-root">
+  <app hoge="fuga"></app>
+</div>
+<%= javascript_pack_tag 'home/show' %>
