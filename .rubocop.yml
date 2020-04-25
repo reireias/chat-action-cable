@@ -49,3 +49,10 @@ Style/FrozenStringLiteralComment:
 # no document
 Style/Documentation:
   Enabled: false
+
+# class Hoge::Fuga style
+ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Style/SymbolArray:
+  Enabled: false

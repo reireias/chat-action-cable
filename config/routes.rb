@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   get 'auth/auth0/callback', to: 'auth0#callback'
   get 'auth/failure', to: 'auth0#failure'
   get 'auth/logout', to: 'sessions#logout'
+
+  namespace :api, format: :json do
+    namespace :v1 do
+      resources :rooms, only: [:index, :show, :create, :destroy]
+    end
+  end
 end
