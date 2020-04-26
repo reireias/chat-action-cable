@@ -1,3 +1,8 @@
-<h1>login</h1>
+<%= stylesheet_pack_tag 'login/show' %>
 
-<%= button_to 'Login', '/auth/auth0', method: :post %>
+<div id="vue-root">
+  <app>
+    <%= button_to 'Login', '/auth/auth0', method: :post, class: 'v-btn v-btn--contained theme--light v-size--default primary' %>
+  </app>
+</div>
+<%= javascript_pack_tag 'login/show' %>

@@ -1,5 +1,5 @@
 <template>
-  <layout>
+  <layout :top="false">
     <v-container class="index-container">
       <v-row justify="center">
         <v-col>

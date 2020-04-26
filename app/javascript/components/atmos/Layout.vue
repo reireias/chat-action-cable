@@ -5,8 +5,8 @@
         >Example Chat Application with ActionCable</v-toolbar-title
       >
       <v-spacer></v-spacer>
-      <v-btn class="toolbar-button" outlined href="/">top</v-btn>
-      <v-btn class="toolbar-button" outlined href="/auth/logout">logout</v-btn>
+      <v-btn v-if="top" class="toolbar-button" outlined href="/">top</v-btn>
+      <v-btn v-if="logout" class="toolbar-button" outlined href="/auth/logout">logout</v-btn>
     </v-app-bar>
     <v-content>
       <v-container>
@@ -15,6 +15,21 @@
     </v-content>
   </v-app>
 </template>
+
+<script>
+export default {
+  props: {
+    top: {
+      type: Boolean,
+      default: true,
+    },
+    logout: {
+      type: Boolean,
+      default: true,
+    },
+  },
+}
+</script>
 
 <style lang="scss">
 .toolbar-button {
