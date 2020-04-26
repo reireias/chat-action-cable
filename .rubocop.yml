@@ -51,8 +51,10 @@ Style/Documentation:
   Enabled: false
 
 # class Hoge::Fuga style
-ClassAndModuleChildren:
+Style/ClassAndModuleChildren:
   EnforcedStyle: compact
+  Exclude:
+    - '**/config/**/*'
 
 Style/SymbolArray:
   Enabled: false

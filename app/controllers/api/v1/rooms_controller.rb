@@ -16,7 +16,10 @@ class Api::V1::RoomsController < Api::ApplicationController
     end
   end
 
-  def show; end
+  def show
+    room = Room.find(params[:id])
+    render json: room
+  end
 
   def destroy
     room = current_user.rooms.find_by(id: params[:id])

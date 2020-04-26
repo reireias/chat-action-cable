@@ -6,6 +6,7 @@ class Auth0Controller < ApplicationController
     # and the IdP
     user = User.create_or_find_from_auth_hash(request.env['omniauth.auth'])
     session[:user_id] = user.id
+    cookies.encrypted[:user_id] = user.id
 
     # Redirect to the URL you want after successful auth
     redirect_to '/'

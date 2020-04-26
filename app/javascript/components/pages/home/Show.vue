@@ -49,7 +49,7 @@
                 v-text="room.name"
               ></v-list-item-title>
               <v-list-item-action class="room-action-button">
-                <v-btn outlined :href="`/chat?roomId=${room.id}`"
+                <v-btn outlined :href="`/rooms/${room.id}`"
                   >join</v-btn
                 >
               </v-list-item-action>

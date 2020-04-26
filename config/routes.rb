@@ -9,9 +9,14 @@ Rails.application.routes.draw do
   get 'auth/failure', to: 'auth0#failure'
   get 'auth/logout', to: 'sessions#logout'
 
+  resources :rooms, only: :show
+
   namespace :api, format: :json do
     namespace :v1 do
-      resources :rooms, only: [:index, :show, :create, :destroy]
+      get 'users/me', to: 'users#me'
+      resources :rooms, only: [:index, :show, :create, :destroy] do
+        resources :messages, only: :create
+      end
     end
   end
 end
